@@ -1,11 +1,12 @@
 {
-    "name": "spider",
+    "name": "Car remote",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "SuperBit": "github:lzty634158/superbit#0a0d6cd2c18804f6b56e944d0c7ff7bd91473ec8",
-        "microphone": "*"
+        "microphone": "*",
+        "OmniBit": "github:lzty634158/omnibit#21c29d255327798ea59b4e2a870ae219d3901af6"
     },
     "files": [
         "main.blocks",

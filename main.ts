@@ -1,48 +1,23 @@
 radio.onReceivedString(function (receivedString) {
     Control = receivedString
     if (Control.compare("F") == 0) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        -255,
-        SuperBit.enMotors.M3,
-        -255
-        )
+        OmniBit.CarRun(OmniBit.enCarRun.Forward, 255)
     } else if (Control.compare("B") == 0) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        255,
-        SuperBit.enMotors.M3,
-        255
-        )
+        OmniBit.CarRun(OmniBit.enCarRun.Back, 255)
     } else if (Control.compare("L") == 0) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        255,
-        SuperBit.enMotors.M3,
-        -255
-        )
+        OmniBit.CarRun(OmniBit.enCarRun.MoveLeft, 255)
     } else if (Control.compare("R") == 0) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        -255,
-        SuperBit.enMotors.M3,
-        255
-        )
+        OmniBit.CarRun(OmniBit.enCarRun.MoveRight, 255)
     } else if (Control.compare("D") == 0) {
-        SuperBit.MotorRunDual(
-        SuperBit.enMotors.M1,
-        0,
-        SuperBit.enMotors.M3,
-        0
-        )
+        OmniBit.CarRun(OmniBit.enCarRun.CarStop, 0)
     } else if (Control.compare("C") == 0) {
-        SuperBit.Music(SuperBit.enMusic.entertainer)
-    } else if (Control.compare("K") == 0) {
-        SuperBit.Music(SuperBit.enMusic.funereal)
-    } else if (Control.compare("A") == 0) {
-        SuperBit.Music(SuperBit.enMusic.ode)
-    } else if (Control.compare("Z") == 0) {
         SuperBit.Music(SuperBit.enMusic.ringtone)
+    } else if (Control.compare("K") == 0) {
+        SuperBit.Music(SuperBit.enMusic.blues)
+    } else if (Control.compare("A") == 0) {
+        SuperBit.Music(SuperBit.enMusic.birthday)
+    } else if (Control.compare("Z") == 0) {
+        SuperBit.Music(SuperBit.enMusic.entertainer)
     }
 })
 let Control = ""
@@ -55,6 +30,3 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
-basic.forever(function () {
-	
-})
